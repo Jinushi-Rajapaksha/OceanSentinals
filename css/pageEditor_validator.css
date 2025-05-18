@@ -1,0 +1,95 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Container for main and aside */
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Sidebar on the left */
+aside {
+  flex: 1;
+  order: 1;
+  background-color: #f4f4f4;
+  color: black;
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-right: 20px;
+}
+
+/* Main content on the right */
+main {
+  order: 2;
+  flex: 3;
+  background-color: #fafafa;
+  color: black;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+/* Section styling within main */
+section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  color: black;
+}
+
+/* Example student banner */
+.stud {
+  text-align: center;
+  background-color: #1966a5ef;
+  color: white;
+  padding: 10px 0;
+  margin-top: 8px;
+}
+
+/* "Go top" button */
+.top {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+.top a {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.top a:hover {
+  background-color: #0056b3;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Footer alignment */
+.footer {
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  color: #780eb6;
+}

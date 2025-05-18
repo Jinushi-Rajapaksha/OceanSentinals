@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    >
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../css/style.css" >
+
+    <!-- Feedback Form CSS -->
+    <link rel="stylesheet" href="../css/Feedback.css" >
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Sentinels - Feedback</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="home.html" class="logo">
+          <img
+            src="../assets/logo.svg"
+            alt="Ocean Sentinels Logo"
+            class="logo-img"
+          >
+        </a>
+        <ul class="nav-links">
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="table.html">Table</a></li>
+          <li><a href="profile.html">User Profile</a></li>
+          <li><a href="feedback.html" class="active">Feedback</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page-Specific Content -->
+    <section class="page-section">
+      <div id="container">
+        <!-- Main Heading -->
+
+        <!-- Sub-Heading (Optional) -->
+        <h2><b>We Value Your Feedback</b></h2>
+
+        <!-- Feedback Form -->
+        <form>
+
+          <fieldset>
+            <legend>Personal Details</legend>
+          <label for="name">Enter your name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter names here"
+            required
+          >
+
+          <label for="email">Enter your email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter email here"
+            required
+          >
+
+          <!--Multiple Choice-->
+          <label for="interests">Select your interests (You can select multiple choices by holding ctrl)</label>
+          
+          <select id="interests" name="interests" multiple>
+          <option value="fishing"> Sustainable fishing</option>
+           <option value="coral">Coral Reef Restoration</option>
+           <option value="Plastic Waste Management"> Plastic Waste Management</option>
+           <option value="awareness">Marine Conservation Awareness</option>
+          </select>
+        
+          </fieldset>
+
+        <fieldset>
+          <legend>Feedback Details</legend>
+
+          <label for="topic">Choose a feedback topic:</label>
+
+          <!--Data List-->
+         <input list="topics" id="topic" name="topic" placeholder="Type or select a topic">
+         <datalist id="topics">
+         <option value="Website Usability">
+        <option value="Content Accuracy">
+        <option value="Design and Layout">
+        <option value="Other">
+       </datalist>
+
+       <!--Radio Buttons-->
+        <div class="radio-questions">
+            <p><b>Is this your first time visiting?</b></p>
+          </div>
+          <div class="radio-buttons">
+            <label>
+              <input
+                type="radio"
+                id="first-yes"
+                name="first-time"
+                value="yes"
+              >
+              Yes
+            </label>
+            <label>
+              <input type="radio" id="first-no" name="first-time" value="no" >
+              No
+            </label>
+          </div>
+
+          <div class="radio-questions">
+            <p>
+              <b>Was this website informative and easy to navigate through?</b>
+            </p>
+          </div>
+          <div class="radio-buttons">
+            <label>
+              <input
+                type="radio"
+                id="informative-yes"
+                name="informative"
+                value="yes"
+              >
+              Yes
+            </label>
+            <label>
+              <input
+                type="radio"
+                id="informative-no"
+                name="informative"
+                value="no"
+              >
+              No
+            </label>
+          </div>
+
+          <label for="improvements"
+            >If "No", suggest any improvements for the future:</label
+          >
+          <textarea
+            id="improvements"
+            name="improvements"
+            placeholder="Add your message here..."
+          ></textarea>
+
+          <!--Rating Scale -->
+          <p><b>How satisfied are you with our services?</b></p>
+          <div class="rating-scale">
+            <span>&#128545;</span>
+            <span>&#128546;</span>
+            <span>&#128529;</span>
+            <span>&#128522;</span>
+            <span>&#128512;</span>
+          </div>
+
+          <!--Radio Buttons-->
+          <div class="radio-questions">
+            <p><b>Would you recommend our services?</b></p>
+          </div>
+          <div class="radio-buttons">
+            <label>
+              <input
+                type="radio"
+                id="recommend-yes"
+                name="recommend"
+                value="yes"
+              >
+              Yes
+            </label>
+            <label>
+              <input
+                type="radio"
+                id="recommend-no"
+                name="recommend"
+                value="no"
+              >
+              No
+            </label>
+          </div>
+         
+          <!--Drop Down-->
+          <label for="updates">Would you like to receive updates?</label>
+          <select id="updates" name="updates">
+            <option>Yes - via Email</option>
+            <option>Yes - via SMS</option>
+            <option>No</option>
+          </select>
+
+          <!--File Upload-->
+          <label for ="attachment">Upload your innovative ideas</label>
+          <input type="file" id="attachment" name="attachment">
+
+
+          <label for="additional"
+            >Do you have any additional questions or requests?</label
+          >
+          <textarea
+            id="additional"
+            name="additional"
+            placeholder="Add your message here..."
+          ></textarea>
+        </fieldset> 
+          <button type="submit">Submit</button>
+         
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Developers Column -->
+        <div class="footer-column">
+          <h3>Developers</h3>
+          <ul>
+            <li>Anjaya</li>
+            <li>Jinushi</li>
+            <li>Sachini</li>
+            <li>Dinuka</li>
+          </ul>
+        </div>
+
+        <!-- Services Column -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li>Sustainable Fishing Practices</li>
+            <li>Coral Reef Restoration Support</li>
+            <li>Marine Conservation Awareness</li>
+            <li>Plastic Waste Management</li>
+          </ul>
+        </div>
+
+        <!-- Links Column -->
+        <div class="footer-column">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="home.html">Home Page</a></li>
+            <li><a href="feedback.html">Feedback Form</a></li>
+            <li><a href="sitemap.html">Site Map</a></li>
+            <li><a href="team.html">Team Page</a></li>
+            <li><a href="pageEditor_ST3.html">Page Editor</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-line" >
+      <p class="edited-by">&copy; 2025 OceanSentinals. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Active Navbar Link -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>

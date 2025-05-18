@@ -1,0 +1,133 @@
+
+
+#container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: transparent;
+  transform: matrix(s0.3s);
+  background: rgba(56, 94, 120, 0.5); /*Semi Transparent*/
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  max-width: 100%;
+  z-index: 2;
+  margin-left: 375px;
+  position: relative;
+  overflow: hidden;
+  color: rgb(199, 216, 228);
+}
+
+h2 {
+  text-align: center;
+  color: #090736;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 95%;
+  padding: 8px;
+  margin-top: 20px;
+  border: 3px solid #326897;
+  border-radius: 10px;
+}
+
+/* Specific to the drop down */
+select {
+  width: 97%;
+}
+select#interests option {
+  color: grey; /* Change the text color to grey in multiple choice */
+}
+
+textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.rating-scale {
+  display: flex;
+  justify-content: space-between; /* Space out evenly*/
+  margin-top: 5px;
+  font-size: 40px;
+}
+
+.rating-scale span {
+  display: inline-block;
+  font-size: 2rem;
+  transition: transform 0.3s ease-in-out;/* Smooth hover effect */
+}
+
+.rating-scale span:hover {
+  transform: scale(1.2); /* Scale up while hovering */
+  filter: brightness(1.2); /* Brighten up while hovering */
+}
+
+/* Radio button questions*/
+.radio-questions {
+  margin-top: 30px;
+  margin-bottom: -20px;
+}
+
+/*Radio Buttons */
+.radio-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(238, 238, 238);
+}
+
+.radio-buttons label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #1d4e5b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: #349da0;
+}
+
+/*Responsive Layout*/
+
+@media (min-width: 600px) {
+  /* Adjust container width for tablets and larger screens */
+  #container {
+    width: 80%; /* Slightly wider for tablets */
+  }
+}
+
+@media (min-width: 768px) {
+  /* Adjust container width and input widths for larger screens */
+  #container {
+    width: 70%; /* Wider for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Adjust container width for desktops */
+  #container {
+    width: 50%; /* Optimal width for desktops */
+  }
+}

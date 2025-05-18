@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #022c43 0%, #5b86e5 100%);
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Container for animated bubbles */
+#bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Style for each bubble */
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: rise linear infinite;
+}
+
+/* Keyframes for rising bubbles */
+@keyframes rise {
+  0% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+/* Main Profile Container */
+.profile-container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* Section Card Styles */
+.section-card {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.section-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+header p {
+  font-size: 1.3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* User Avatar and Information */
+.user-info {
+  text-align: center;
+}
+.avatar-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+.avatar-img:hover {
+  transform: scale(1.05);
+}
+.user-info h2 {
+  margin-top: 15px;
+  font-size: 2.2em;
+}
+.user-info p {
+  font-size: 1.2em;
+}
+
+/* Profile Information Section */
+.profile-info h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4ebbf1;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.profile-info p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+.info-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.category {
+  flex: 1 1 300px;
+  margin: 15px;
+}
+.category h3 {
+  margin-bottom: 12px;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+.category ul {
+  list-style: none;
+}
+.category li {
+  margin-bottom: 18px;
+  font-size: 1.1em;
+}
+.progress-bar {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  height: 8px;
+  margin-top: 5px;
+}
+.progress {
+  background: linear-gradient(90deg, #4ebbf1, #099ae3);
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Goals Section */
+.goals-category ul {
+  list-style: none;
+  padding-left: 0;
+}
+.goals-category li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background 0.3s ease;
+}
+.goals-category li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.goals-category li i {
+  margin-right: 10px;
+  font-size: 1.5em;
+  color: #4ebbf1;
+}
+.goals-category li span {
+  font-size: 1.1em;
+}
+
+/* Volunteering Section */
+.volunteering-section h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4ebbf1;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.volunteering-list {
+  list-style: none;
+  padding-left: 0;
+}
+.volunteering-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+}
+.volunteering-list li i {
+  margin-right: 10px;
+  font-size: 1.6em;
+  transition: color 0.3s;
+}
+.volunteering-list li:hover i {
+  color: #4ebbf1;
+}
+
+/* Interests Section */
+.interests-section h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4ebbf1;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.interests-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.interest-item {
+  margin: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.interest-item i {
+  transition: transform 0.3s, color 0.3s;
+  font-size: 2.5em;
+}
+.interest-item:hover {
+  transform: translateY(-5px);
+}
+.interest-item i:hover {
+  color: #4ebbf1;
+}
+.interest-item p {
+  margin-top: 8px;
+  font-size: 1.1em;
+}
+
+/* Schedule Section (Table) */
+.schedule-section h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4ebbf1;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.schedule-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.schedule-section th,
+.schedule-section td {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 12px;
+  text-align: left;
+  font-size: 1.1em;
+}
+.schedule-section th {
+  background: rgba(0, 0, 0, 0.7);
+}
+.schedule-section tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Contact Me Section */
+.contact-section h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4ebbf1;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-section label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.contact-section input,
+.contact-section textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.contact-section input:focus,
+.contact-section textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #4ebbf1;
+}
+.contact-section button {
+  padding: 12px;
+  background: #4ebbf1;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1.1em;
+}
+.contact-section button:hover {
+  background: #099ae3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .info-categories {
+    flex-direction: column;
+  }
+}

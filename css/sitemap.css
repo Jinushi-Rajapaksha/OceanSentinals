@@ -1,0 +1,35 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #041b2d;
+  color: #ffffff;
+  text-align: center;
+}
+svg {
+  width: 100%;
+  height: auto;
+  max-height: 900px;
+}
+.box {
+  fill: #1c4d88;
+  stroke: #ffffff;
+  stroke-width: 2;
+  rx: 8;
+  ry: 8;
+}
+.box-title {
+  fill: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.box-item {
+  fill: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+}
+a:hover .box {
+  fill: darkblue;
+}
+.footer {
+  margin-top: -100px;
+  text-align: left;
+}

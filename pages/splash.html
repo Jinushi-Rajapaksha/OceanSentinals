@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+     <link rel="stylesheet" href="../css/style.css" />
+     <link rel="stylesheet" href="../css/splash.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Under the Water</title>
+    <link rel="stylesheet" href="styles.css" />
+    
+  </head>
+  <body>
+    <div class="splash-screen" id="splash">
+      <img src="../assets/bg.jpg" alt="Background" class="background" />
+      <img
+        src="../assets/logo.svg"
+        alt="Ocean Sentinels Logo"
+        class="logo-img"
+      />
+      <div class="bubbles"></div>
+
+      <div class="mission-card">
+        <h2>OCEAN SENTINALS</h2>
+        <p>
+          To explore and conserve the wonders of the underwater world, promoting
+          awareness and protection for future generations.
+        </p>
+
+        <div class="group-members">Group Members</div>
+        <div class="team-names">
+          <span>Student 1 - Dinuka</span>
+          <span>Student 2 - Anjaya</span>
+          <span>Student 3 - Sachini</span>
+          <span>Student 4 - Jinushi</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const bubblesContainer = document.querySelector(".bubbles");
+        function createBubble() {
+          const bubble = document.createElement("span");
+          bubble.style.left = Math.random() * 100 + "vw";
+          bubble.style.width = Math.random() * 15 + 10 + "px";
+          bubble.style.height = bubble.style.width;
+          bubble.style.animationDuration = Math.random() * 3 + 3 + "s";
+          bubblesContainer.appendChild(bubble);
+          setTimeout(() => {
+            bubble.remove();
+          }, 6000);
+        }
+        setInterval(createBubble, 250);
+
+        setTimeout(() => {
+          window.location.href = "home.html";
+        }, 4000);
+      });
+    </script>
+  </body>
+</html>
